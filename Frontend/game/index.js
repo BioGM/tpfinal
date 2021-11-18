@@ -9,7 +9,7 @@ const config = {
   parent: 'game',
   width: 1000,
   height: 600,
-  scene: [/*intro, startScreen, menu, levels,*/ level1,level2],
+  scene: [/*intro, startScreen, menu, levels, level1,*/level2],
   physics: {
     default: 'arcade',
     arcade: {

@@ -1,4 +1,5 @@
 
+/*-----------------CASTILLO-----------------*/
 export class level2 extends Phaser.Scene {
     constructor() {
         super({ key: 'level2' });
@@ -54,10 +55,7 @@ export class level2 extends Phaser.Scene {
         this.load.audio('temaCastillo', '/assets/sounds/temaCastillo.mp3')
 
 
-
-
-
-
+        /*------comidas---------*/
         this.load.image('manzana', '/assets/images/food/manzana.png')//cambiar por palta
         this.load.image('burger', '/assets/images/food/burger.png')
         this.load.image('pizza', '/assets/images/food/pizza.png')
@@ -215,9 +213,7 @@ export class level2 extends Phaser.Scene {
             this.jumpCount = 0;
         }
 
-        // if (this.isFlapMode && this.input.activePointer.isDown) {
-        //     this.jump();
-        // }
+      
         if (this.box.body.positionX <= 10) {
             
             this.gameOver();

@@ -4,8 +4,8 @@ export class CreditsButton {
     }
 
     preload() {
-        this.relatedScene.load.spritesheet('credits', '../assets/images/creditsButton.png', { frameWidth: 385, frameHeight: 131 });
-        this.relatedScene.load.audio('creditsSound', '../assets/sounds/rollover2.ogg');
+        this.relatedScene.load.spritesheet('credits', '/assets/images/interface/creditsButton.png', { frameWidth: 385, frameHeight: 131 });
+        this.relatedScene.load.audio('creditsSound', '/assets/sounds/rollover2.ogg');
     }
 
     create() {

@@ -15,7 +15,7 @@ export class levels extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image('levelsPopUp', '../assets/images/levels.png');
+      this.load.image('levelsPopUp', '/assets/images/interface/levels.png');
       this.backButton.preload();
       this.Level1Button.preload();
       this.Level2Button.preload();

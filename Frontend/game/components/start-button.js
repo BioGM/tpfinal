@@ -4,8 +4,8 @@ export class StartButton {
     }
 
     preload() {
-        this.relatedScene.load.spritesheet('start', '../assets/images/startButton.png', { frameWidth: 304, frameHeight: 80 });
-        this.relatedScene.load.audio('startSound', '../assets/sounds/switch30.ogg');
+        this.relatedScene.load.spritesheet('start', '/assets/images/interface/startButton.png', { frameWidth: 304, frameHeight: 80 });
+        this.relatedScene.load.audio('startSound', '/assets/sounds/switch30.ogg');
     }
 
     create() {

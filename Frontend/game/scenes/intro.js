@@ -4,9 +4,9 @@ export class intro extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('autumm', '../assets/images/Autumm.png');
-    this.load.image('startScreenBack', '../assets/images/wall.png');
-    this.load.audio('intro', '../assets/sounds/introVPHP.mp3')
+    this.load.image('autumm', '/assets/images/interface/Autumm.png');
+    this.load.image('startScreenBack', '/assets/images/interface/wall.png');
+    this.load.audio('intro', '/assets/sounds/introVPHP.mp3')
   }
 
   create() {

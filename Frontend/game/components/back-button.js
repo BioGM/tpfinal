@@ -4,8 +4,8 @@ export class BackButton {
     }
 
     preload() {
-        this.relatedScene.load.spritesheet('back', '../assets/images/backButton.png', { frameWidth: 128, frameHeight: 128 });
-        this.relatedScene.load.audio('backSound', '../assets/sounds/switch38.ogg');
+        this.relatedScene.load.spritesheet('back', '/assets/images/interface/backButton.png', { frameWidth: 128, frameHeight: 128 });
+        this.relatedScene.load.audio('backSound', '/assets/sounds/switch38.ogg');
     }
 
     create() {

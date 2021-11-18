@@ -4,7 +4,7 @@ export class Level4 {
     }
 
     preload() {
-        this.relatedScene.load.spritesheet('lvl4', '../assets/images/lvl4.png', { frameWidth: 205, frameHeight: 238 });
+        this.relatedScene.load.spritesheet('lvl4', '/assets/images/interface/lvl4.png', { frameWidth: 205, frameHeight: 238 });
     }
 
     create() {

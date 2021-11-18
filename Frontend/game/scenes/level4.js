@@ -169,7 +169,7 @@ export class level4 extends Phaser.Scene {
         //diablo
         this.diablo = this.physics.add.sprite(58 * 700, 565, 'diablo').setOrigin(0, 1);
         this.diablo.body.velocity.x = -700;
-        this.physics.add.overlap(this.box, this.diablo, this.gameOver, null, this);
+        this.physics.add.overlap(this.box, this.diablo, this.win, null, this);
 
         //portalGravity
         this.portalGravity = this.physics.add.sprite(7 * 700, 465, 'portalGravity').setOrigin(0, 1);
@@ -414,7 +414,16 @@ export class level4 extends Phaser.Scene {
 
     }
 
+    win(){
+        this.time.addEvent({
+            delay: 700,
+            callback: () => {
+                this.scene.start('levelComplete');
+            },
+            loop: false
+        })
 
+    }
     gameOver() {
 
         this.physics.pause();

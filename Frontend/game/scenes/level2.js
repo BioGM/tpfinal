@@ -144,7 +144,7 @@ export class level2 extends Phaser.Scene {
         //puertaCastle
         this.puertaCastle = this.physics.add.sprite(60 * 700, 550, 'puertaCastle').setOrigin(0, 1);
         this.puertaCastle.body.velocity.x = -700;
-        this.physics.add.overlap(this.box, this.puertaCastle, this.gameOver, null, this);
+        this.physics.add.overlap(this.box, this.puertaCastle, this.win, null, this);
 
 
         this.input.on('pointerdown', this.jump, this);
@@ -243,7 +243,7 @@ export class level2 extends Phaser.Scene {
             this.temCount = 0;//no sirve
         }
 
-        console.log(this.temCount)
+        
 
     }
 
@@ -350,6 +350,17 @@ export class level2 extends Phaser.Scene {
         //     }
         //     this.box.body.velocity.y = -1100;
         // }
+
+    }
+
+    win(){
+        this.time.addEvent({
+            delay: 700,
+            callback: () => {
+                this.scene.start('levelComplete');
+            },
+            loop: false
+        })
 
     }
 

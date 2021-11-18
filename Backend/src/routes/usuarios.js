@@ -1,22 +1,21 @@
 const express = require('express');
 const router = express.Router();
-//const suscribe = express.Router();
 
-const bodyParser =  require('body-parser');
+//const bodyParser =  require('body-parser');
 const mysqlConnection = require('../database.js');
 
-
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({extended:true});
+//var jsonParser = bodyParser.json();
+//var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 //registrar un usuario
 
-router.post('/suscripto/',urlencodedParser,(req,res)=>{
+router.post('/suscripto',(req,res)=>{
     const {email} = req.body;
     console.log(req.body);
     console.log(email)
     
-    mysqlConnection.query('INSERT INTO usuarios (mail) VALUE (?)', [email],  (error,  fields)=> {
+    
+    mysqlConnection.query(`INSERT INTO usuarios (mail) VALUE (?)`, [email],  (error,  fields)=> {
         if (!error) {
             res.send(
                 '<h1>Gracias por suscribirte</h1>',

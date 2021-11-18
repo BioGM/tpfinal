@@ -191,7 +191,7 @@ export class level3 extends Phaser.Scene {
         //puertaInfernal
         this.puertaInfernal = this.physics.add.sprite(58 * 700, 565, 'puertaInfernal').setOrigin(0, 1);
         this.puertaInfernal.body.velocity.x = -700;
-        this.physics.add.overlap(this.box, this.puertaInfernal, this.gameOver, null, this);
+        this.physics.add.overlap(this.box, this.puertaInfernal, this.win, null, this);
 
         this.input.on('pointerdown', this.jump, this);
         this.input.keyboard.on('keydown-SPACE', this.jump, this);
@@ -421,6 +421,16 @@ export class level3 extends Phaser.Scene {
 
     }
 
+    win(){
+        this.time.addEvent({
+            delay: 700,
+            callback: () => {
+                this.scene.start('levelComplete');
+            },
+            loop: false
+        })
+
+    }
 
     gameOver() {
 

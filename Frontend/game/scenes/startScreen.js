@@ -7,11 +7,11 @@ export class startScreen extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('autumm', '/Frontend/assets/images/interface/au');
-    //this.load.image('autumm', './assets/images/interface/Autumm.png');
-    this.load.image('vegPow', '/assets/images/interface/vp.png');
-    this.load.image('startScreenBack', '/assets/images/interface/wall.png');
-    this.load.audio('menu', '/assets/sounds/menuVPHP.mp3');
+    
+    this.load.image('autumm', './assets/images/interface/Autumm.png');
+    this.load.image('vegPow', './assets/images/interface/vp.png');
+    this.load.image('startScreenBack', './assets/images/interface/wall.png');
+    this.load.audio('menu', './assets/sounds/menuVPHP.mp3');
     this.startButton.preload();
   }
 

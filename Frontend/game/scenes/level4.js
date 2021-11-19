@@ -43,49 +43,49 @@ export class level4 extends Phaser.Scene {
     preload() {
 
 
-        this.load.image('diablo', '/assets/images/level4/diablo.png')
+        this.load.image('diablo', './assets/images/level4/diablo.png')
 
-        this.load.image('hellTile', '/assets/images/level4/hell.png');
-        this.load.image('hellPartTile', '/assets/images/level4/hellParticulas.png');
+        this.load.image('hellTile', './assets/images/level4/hell.png');
+        this.load.image('hellPartTile', './assets/images/level4/hellParticulas.png');
 
 
-        this.load.image('groundBottom', '/assets/images/level4/hellGround.png');
+        this.load.image('groundBottom', './assets/images/level4/hellGround.png');
 
-        this.load.image('groundTop', '/assets/images/level4/hellTop.png');
+        this.load.image('groundTop', './assets/images/level4/hellTop.png');
 
-        this.load.image('spikeBottom', '/assets/images/level4/spikeBottom.png');
-        this.load.image('spikeTop', '/assets/images/level4/spikeTop.png');
+        this.load.image('spikeBottom', './assets/images/level4/spikeBottom.png');
+        this.load.image('spikeTop', './assets/images/level4/spikeTop.png');
 
 
         /*levels*/
-        this.load.image('linea', '/assets/images/levels/linea.png')
+        this.load.image('linea', './assets/images/levels/linea.png')
 
-        this.load.image('portalFlap', '/assets/images/levels/portalFlap.png');
-        this.load.image('portalGravity', '/assets/images/levels/portalGravity.png');
-        this.load.image('portalGravity2', '/assets/images/levels/portalGravity.png');
-        this.load.image('portal', '/assets/images/levels/portal.png');
-        this.load.image('portal2', '/assets/images/levels/portal.png');
+        this.load.image('portalFlap', './assets/images/levels/portalFlap.png');
+        this.load.image('portalGravity', './assets/images/levels/portalGravity.png');
+        this.load.image('portalGravity2', './assets/images/levels/portalGravity.png');
+        this.load.image('portal', './assets/images/levels/portal.png');
+        this.load.image('portal2', './assets/images/levels/portal.png');
 
-        this.load.image('hellPlataforma', '/assets/images/levels/hellPlataforma.png');
-        this.load.image('spikeSide', '/assets/images/levels/spikeSide.png');
+        this.load.image('hellPlataforma', './assets/images/levels/hellPlataforma.png');
+        this.load.image('spikeSide', './assets/images/levels/spikeSide.png');
 
-        this.load.image('xob', '/assets/images/levels/xob.png');
-        this.load.image('rocket', '/assets/images/levels/rocket.png');
-        this.load.image('box', '/assets/images/levels/box.png');
+        this.load.image('xob', './assets/images/levels/xob.png');
+        this.load.image('rocket', './assets/images/levels/rocket.png');
+        this.load.image('box', './assets/images/levels/box.png');
 
 
-        this.load.image('level4', '/assets/images/level4/level4.png')
+        this.load.image('level4', './assets/images/level4/level4.png')
 
 
         /*sonidos*/
-        this.load.audio('hellTheme', '/assets/sounds/hellTheme.mp3')
+        this.load.audio('hellTheme', './assets/sounds/hellTheme.mp3')
 
 
 
-        this.load.image('manzana', '/assets/images/food/manzana.png')
-        this.load.image('burger', '/assets/images/food/burger.png')
-        this.load.image('pizza', '/assets/images/food/pizza.png')
-        this.load.spritesheet('energy', '/assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
+        this.load.image('manzana', './assets/images/food/manzana.png')
+        this.load.image('burger', './assets/images/food/burger.png')
+        this.load.image('pizza', './assets/images/food/pizza.png')
+        this.load.spritesheet('energy', './assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
 
 
 

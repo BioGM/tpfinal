@@ -4,7 +4,7 @@ export class levelComplete extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('completed', '/assets/images/interface/levelComplete.png');
+    this.load.image('completed', './assets/images/interface/levelComplete.png');
   }
 
   create() {

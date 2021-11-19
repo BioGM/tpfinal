@@ -46,47 +46,47 @@ export class level3 extends Phaser.Scene {
     preload() {
 
         /*level3*/
-        this.load.image('batTile', '/assets/images/level3/batTile.png')
-        this.load.image('hellTile', '/assets/images/level3/cementary.png');
-        this.load.image('hellPartTile', '/assets/images/level3/cementaryParticulas.png ');
-        this.load.image('groundBottom', '/assets/images/level3/cementaryBot.png');
-        this.load.image('groundTop', '/assets/images/level3/cementaryTop.png');
+        this.load.image('batTile', './assets/images/level3/batTile.png')
+        this.load.image('hellTile', './assets/images/level3/cementary.png');
+        this.load.image('hellPartTile', './assets/images/level3/cementaryParticulas.png ');
+        this.load.image('groundBottom', './assets/images/level3/cementaryBot.png');
+        this.load.image('groundTop', './assets/images/level3/cementaryTop.png');
 
-        this.load.image('spikeBottom', '/assets/images/level3/skeleton.png');
-        this.load.image('spikeTop', '/assets/images/level3/phantom.png');
-        this.load.image('spikeSide', '/assets/images/level3/spide.png');
+        this.load.image('spikeBottom', './assets/images/level3/skeleton.png');
+        this.load.image('spikeTop', './assets/images/level3/phantom.png');
+        this.load.image('spikeSide', './assets/images/level3/spide.png');
 
-        this.load.image('puertaInfernal', '/assets/images/level3/puertaInfernal.png');
+        this.load.image('puertaInfernal', './assets/images/level3/puertaInfernal.png');
 
 
         /*levels*/
-        this.load.image('linea', '/assets/images/levels/linea.png')
-        this.load.image('portalFlap', '/assets/images/levels/portalFlap.png');
-        this.load.image('portalGravity', '/assets/images/levels/portalGravity.png');
-        this.load.image('portalGravity2', '/assets/images/levels/portalGravity.png');
-        this.load.image('portal', '/assets/images/levels/portal.png');
-        this.load.image('portal2', '/assets/images/levels/portal.png');
+        this.load.image('linea', './assets/images/levels/linea.png')
+        this.load.image('portalFlap', './assets/images/levels/portalFlap.png');
+        this.load.image('portalGravity', './assets/images/levels/portalGravity.png');
+        this.load.image('portalGravity2', './assets/images/levels/portalGravity.png');
+        this.load.image('portal', './assets/images/levels/portal.png');
+        this.load.image('portal2', './assets/images/levels/portal.png');
 
-        this.load.image('hellPlataforma', '/assets/images/levels/hellPlataforma.png');
+        this.load.image('hellPlataforma', './assets/images/levels/hellPlataforma.png');
         
-        this.load.image('xob', '/assets/images/levels/xob.png');
-        this.load.image('rocket', '/assets/images/levels/rocket.png');
-        this.load.image('box', '/assets/images/levels/box.png');
+        this.load.image('xob', './assets/images/levels/xob.png');
+        this.load.image('rocket', './assets/images/levels/rocket.png');
+        this.load.image('box', './assets/images/levels/box.png');
        
 
 
-        this.load.image('level3', '/assets/images/level3/level3.png')
+        this.load.image('level3', './assets/images/level3/level3.png')
 
 
         /*sonidos*/
-        this.load.audio('cementeryTheme', '/assets/sounds/cementeryTheme.mp3')
+        this.load.audio('cementeryTheme', './assets/sounds/cementeryTheme.mp3')
 
 
 
-        this.load.image('manzana', '/assets/images/food/manzana.png')
-        this.load.image('burger', '/assets/images/food/burger.png')
-        this.load.image('pizza', '/assets/images/food/pizza.png')
-        this.load.spritesheet('energy', '/assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
+        this.load.image('manzana', './assets/images/food/manzana.png')
+        this.load.image('burger', './assets/images/food/burger.png')
+        this.load.image('pizza', './assets/images/food/pizza.png')
+        this.load.spritesheet('energy', './assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
 
 
 

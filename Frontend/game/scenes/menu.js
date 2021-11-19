@@ -13,8 +13,8 @@ export class menu extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image('menuBackground', '/assets/images/interface/wall_menu.png');
-      this.load.image('popUp', '/assets/images/interface/popUp.png')
+      this.load.image('menuBackground', './assets/images/interface/wall_menu.png');
+      this.load.image('popUp', './assets/images/interface/popUp.png')
       this.backButton.preload();
       this.creditsButton.preload();
       this.levelsButton.preload();

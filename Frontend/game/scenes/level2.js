@@ -37,32 +37,32 @@ export class level2 extends Phaser.Scene {
     preload() {
 
 
-        this.load.image('linea', '/assets/images/levels/linea.png')
-        this.load.image('castleTile', '/assets/images/level2/castle.png');
-        this.load.image('columnasTile', '/assets/images/level2/columnas.png');
-        this.load.image('castleGround', '/assets/images/level2/castleGround.png');
-        this.load.image('castlePlataforma', '/assets/images/level2/castlePlataforma.png');
-        this.load.image('spikeBottomCastle', '/assets/images/level2/spikeBottomCastle.png');
-        this.load.image('puertaCastle', '/assets/images/level2/puertaCastle.png');
-        this.load.image('level2', '/assets/images/level2/level2.png')
+        this.load.image('linea', './assets/images/levels/linea.png')
+        this.load.image('castleTile', './assets/images/level2/castle.png');
+        this.load.image('columnasTile', './assets/images/level2/columnas.png');
+        this.load.image('castleGround', './assets/images/level2/castleGround.png');
+        this.load.image('castlePlataforma', './assets/images/level2/castlePlataforma.png');
+        this.load.image('spikeBottomCastle', './assets/images/level2/spikeBottomCastle.png');
+        this.load.image('puertaCastle', './assets/images/level2/puertaCastle.png');
+        this.load.image('level2', './assets/images/level2/level2.png')
 
 
-        this.load.image('box', '/assets/images/levels/box.png');
-        this.load.image('groundTop', '/assets/images/levels/Top.png');
+        this.load.image('box', './assets/images/levels/box.png');
+        this.load.image('groundTop', './assets/images/levels/Top.png');
 
-        this.load.image('spikeSide', '/assets/images/levels/spikeSide.png');
+        this.load.image('spikeSide', './assets/images/levels/spikeSide.png');
         /*sonidos*/
-        this.load.audio('temaCastillo', '/assets/sounds/temaCastillo.mp3')
+        this.load.audio('temaCastillo', './assets/sounds/temaCastillo.mp3')
 
 
         /*------comidas---------*/
-        this.load.image('manzana', '/assets/images/food/manzana.png')//cambiar por palta
-        this.load.image('burger', '/assets/images/food/burger.png')
-        this.load.image('pizza', '/assets/images/food/pizza.png')
+        this.load.image('manzana', './assets/images/food/manzana.png')//cambiar por palta
+        this.load.image('burger', './assets/images/food/burger.png')
+        this.load.image('pizza', './assets/images/food/pizza.png')
 
 
 
-        this.load.spritesheet('energy', '/assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
+        this.load.spritesheet('energy', './assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
 
 
 

@@ -4,8 +4,8 @@ export class LevelsButton {
     }
 
     preload() {
-        this.relatedScene.load.spritesheet('levels', '/assets/images/interface/levelsButton.png', { frameWidth: 385, frameHeight: 131 });
-        this.relatedScene.load.audio('levelsSound', '/assets/sounds/switch16.ogg');
+        this.relatedScene.load.spritesheet('levels', './assets/images/interface/levelsButton.png', { frameWidth: 385, frameHeight: 131 });
+        this.relatedScene.load.audio('levelsSound', './assets/sounds/switch16.ogg');
     }
 
     create() {

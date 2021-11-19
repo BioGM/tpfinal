@@ -192,62 +192,156 @@ const peraList3 = [
 
 ///////////////////////INFIERNO
 
-const sandiaList2 = [
+const sandiaList4 = [
     {
-        seconds: 2,
+        seconds: 4.6,
         quantity: 1,
-        y: 540,
+        y: 250,
 
     },
     {
-        seconds: 6,
+        seconds: 9.5,
         quantity: 1,
-        y: 540,
+        y: 250,
+
     },
     {
-        seconds: 12,
+        seconds: 12.6,
         quantity: 1,
-        y: 540,
+        y: 250,
+
     },
     {
-        seconds: 91,
+        seconds: 14,
         quantity: 1,
-        y: 540,
+        y: 250,
+
     },
     {
-        seconds: 101,
+        seconds: 16.5,
         quantity: 1,
-        y: 540,
+        y: 250,
+
+    },
+    {
+        seconds: 20,
+        quantity: 1,
+        y: 250,
+
+    },
+    {
+        seconds: 26,
+        quantity: 1,
+        y: 250,
+
+    },
+    {
+        seconds: 32.6,
+        quantity: 1,
+        y: 280,
+
+    },
+    {
+        seconds: 37.6,
+        quantity: 1,
+        y: 200,
+
+    },
+    {
+        seconds: 41.5,
+        quantity: 1,
+        y: 300,
+
+    },
+    {
+        seconds: 44.7,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 46.5,
+        quantity: 1,
+        y: 300,
+
+    },
+    {
+        seconds: 50.7,
+        quantity: 1,
+        y: 300,
+
     }
+     
 
 ]
 
-const paltaList2= [
+const paltaList4= [
     {
-        seconds: 2,
+        seconds: 5.7,
         quantity: 1,
-        y: 540,
+        y: 280,
 
     },
     {
-        seconds: 6,
+        seconds: 11.5,
         quantity: 1,
-        y: 540,
+        y: 280,
+
     },
     {
-        seconds: 12,
+        seconds: 24.5,
         quantity: 1,
-        y: 540,
+        y: 220,
+
     },
     {
-        seconds: 91,
+        seconds: 27.8,
         quantity: 1,
-        y: 540,
+        y: 220,
+
     },
     {
-        seconds: 101,
+        seconds: 31.3,
+        quantity: 1,
+        y: 280,
+
+    },
+    {
+        seconds: 34.2,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 38.7,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 42.7,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 49.3,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 53.5,
+        quantity: 1,
+        y: 220,
+
+    },
+    {
+        seconds: 54.5,
         quantity: 1,
         y: 540,
+
     }
+   
 
 ]

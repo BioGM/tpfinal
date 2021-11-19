@@ -945,6 +945,11 @@ const hellPlataformaList4 = [
         seconds: 44,
         quantity: 1,
         y:450
+    },
+    {
+        seconds: 57,
+        quantity: 1,
+        y:400
     }
 ]
 const spikeBottomList4 = [
@@ -956,6 +961,11 @@ const spikeBottomList4 = [
     {
         seconds: 4,
         quantity: 3,
+        y:550
+    },
+    {
+        seconds: 6,
+        quantity: 2,
         y:550
     },
     {
@@ -984,10 +994,16 @@ const spikeBottomList4 = [
         y:550
     },
     {
-        seconds: 6,
+        seconds: 21,
+        quantity: 15,
+        y:550
+    },
+    {
+        seconds: 30,
         quantity: 2,
         y:550
     },
+    
     {
         seconds: 31,
         quantity: 2,
@@ -1034,8 +1050,33 @@ const spikeBottomList4 = [
         y:550
     },
     {
+        seconds: 49,
+        quantity: 2,
+        y:550
+    },
+    {
+        seconds: 50,
+        quantity: 2,
+        y:550
+    },
+    {
         seconds: 52,
         quantity: 5,
+        y:550
+    },
+    {
+        seconds: 53,
+        quantity: 1,
+        y:550
+    },
+    {
+        seconds: 54,
+        quantity: 1,
+        y:550
+    },
+    {
+        seconds: 55.5,
+        quantity: 1,
         y:550
     },
     {
@@ -1063,7 +1104,17 @@ const spikeTopList4 = [
         y:130
     },
     {
+        seconds: 15,
+        quantity: 6,
+        y:130
+    },
+    {
         seconds: 17,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 29,
         quantity: 4,
         y:130
     }
@@ -1092,15 +1143,16 @@ const spikeSideList4 = [
         y:300
     },
     {
-        seconds: 23,
-        quantity: 2,
-        y:415
-    },
-    {
         seconds: 19,
         quantity: 3,
         y:300
     },
+    {
+        seconds: 23,
+        quantity: 2,
+        y:415
+    },
+   
     {
         seconds: 24,
         quantity: 2,
@@ -1117,10 +1169,137 @@ const spikeSideList4 = [
         y:265
     },
     {
+        seconds: 28.5,
+        quantity: 4,
+        y:300
+    },
+    {
+        seconds: 30.5,
+        quantity: 3,
+        y:186
+    },
+    {
         seconds: 32,
         quantity: 3,
         y:186
-    }
+    },
+    {
+        seconds: 34,
+        quantity: 1,
+        y:186
+    },
+    {
+        seconds: 34.5,
+        quantity: 2,
+        y:186
+    },
+    {
+        seconds: 35,
+        quantity: 3,
+        y:186
+    },
+    {
+        seconds: 35.5,
+        quantity: 4,
+        y:186
+    },
 
+    {
+        seconds: 39,
+        quantity: 5,
+        y:130
+    },
+    {
+        seconds: 39.5,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 40,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 40.5,
+        quantity: 2,
+        y:130
+    },
+    {
+        seconds: 43,
+        quantity: 4,
+        y:130
+    },
+    
+    {
+        seconds: 45,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 46,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 47,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 48,
+        quantity: 4,
+        y:130
+    },
+
+
+    {
+        seconds: 48.5,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 50,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 51,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 52,
+        quantity: 3,
+        y:130
+    },
+
+    
+    {
+        seconds: 53,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 54,
+        quantity: 3,
+        y:130
+    },
+    {
+        seconds: 54.5,
+        quantity: 4,
+        y:130
+    },
+    {
+        seconds: 55.5,
+        quantity: 3,
+        y:130
+    },
+
+
+    {
+        seconds: 56.5,
+        quantity: 4,
+        y:130
+    }
 
 ]

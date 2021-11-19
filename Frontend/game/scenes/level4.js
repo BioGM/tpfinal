@@ -82,9 +82,9 @@ export class level4 extends Phaser.Scene {
 
 
 
-        this.load.image('manzana', './assets/images/food/manzana.png')
+        this.load.image('palta', './assets/images/food/palta.png')
+        this.load.image('sandia', './assets/images/food/sandia.png')
         this.load.image('burger', './assets/images/food/burger.png')
-        this.load.image('pizza', './assets/images/food/pizza.png')
         this.load.spritesheet('energy', './assets/images/interface/energia.png', { frameWidth: 586, frameHeight: 67 })
 
 
@@ -161,15 +161,6 @@ export class level4 extends Phaser.Scene {
         //this.physics.add.collider(this.box, this.spikes, this.gameOver, null, this)
         this.physics.add.collider(this.box, this.hellPlataforma, null, this)
 
-        //portalFlap
-        this.portalFlap = this.physics.add.sprite(21 * 700, 465, 'portalFlap').setOrigin(0, 1);
-        this.portalFlap.body.velocity.x = -700;
-        this.physics.add.overlap(this.box, this.portalFlap, this.onChangeToFlap, null, this);
-
-        //diablo
-        this.diablo = this.physics.add.sprite(58 * 700, 565, 'diablo').setOrigin(0, 1);
-        this.diablo.body.velocity.x = -700;
-        this.physics.add.overlap(this.box, this.diablo, this.win, null, this);
 
         //portalGravity
         this.portalGravity = this.physics.add.sprite(7 * 700, 465, 'portalGravity').setOrigin(0, 1);
@@ -180,11 +171,21 @@ export class level4 extends Phaser.Scene {
         this.portal = this.physics.add.sprite(15 * 700, 465, 'portal').setOrigin(0, 1);
         this.portal.body.velocity.x = -700;
         this.physics.add.overlap(this.box, this.portal, this.normal, null, this);
+        
+        //portalFlap
+        this.portalFlap = this.physics.add.sprite(21 * 700, 465, 'portalFlap').setOrigin(0, 1);
+        this.portalFlap.body.velocity.x = -700;
+        this.physics.add.overlap(this.box, this.portalFlap, this.onChangeToFlap, null, this);
 
         //portalNoFlap
         this.portalNoFlap = this.physics.add.sprite(29 * 700, 465, 'portal').setOrigin(0, 1);
         this.portalNoFlap.body.velocity.x = -700;
         this.physics.add.overlap(this.box, this.portalNoFlap, this.noFlap, null, this);
+        
+        //diablo
+        this.diablo = this.physics.add.sprite(58 * 700, 565, 'diablo').setOrigin(0, 1);
+        this.diablo.body.velocity.x = -700;
+        this.physics.add.overlap(this.box, this.diablo, this.win, null, this);
 
         this.input.on('pointerdown', this.jump, this);
         this.input.keyboard.on('keydown-SPACE', this.jump, this);
@@ -201,7 +202,8 @@ export class level4 extends Phaser.Scene {
 
         this.goodFoods = this.physics.add.group();
 
-        this.crear_food(this.goodFoods, paltaList, 'manzana');
+        this.crear_food(this.goodFoods, paltaList4, 'palta');
+        this.crear_food(this.goodFoods, sandiaList4, 'sandia');
 
         this.goodFoods.setVelocityX(-700);
 
@@ -210,8 +212,7 @@ export class level4 extends Phaser.Scene {
 
         this.badFoods = this.physics.add.group();
 
-        this.crear_badfood(this.badFoods, burgerList, 'burger');
-        this.crear_badfood(this.badFoods, pizzaList, 'pizza');
+        this.crear_badfood(this.badFoods, burgerList4, 'burger');
 
         this.badFoods.setVelocityX(-700);
 
@@ -307,7 +308,7 @@ export class level4 extends Phaser.Scene {
             let positionX = 0;
             for (let i = 0; i < name.quantity; i++) {
 
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.25);
+                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.3);
                 positionX += nameAux.width;
 
             }
@@ -322,7 +323,7 @@ export class level4 extends Phaser.Scene {
             let positionX = 0;
             for (let i = 0; i < name.quantity; i++) {
 
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.2);
+                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.3);
                 positionX += nameAux.width;
 
             }
@@ -369,7 +370,8 @@ export class level4 extends Phaser.Scene {
 
 
         if (this.isFlapMode) {
-            this.box.body.velocity.y = -800;
+            this.box.body.velocity.y = -400;
+           
             return;
         }
 
@@ -381,9 +383,10 @@ export class level4 extends Phaser.Scene {
             this.box.body.velocity.y = 900;
         } else {
             if (this.isFlapMode) {
-                this.box.body.velocity.y = -200;
+                this.box.body.velocity.y = -400;
                 return;
             }
+           
             this.box.body.velocity.y = -1100;
         }
 
@@ -393,7 +396,7 @@ export class level4 extends Phaser.Scene {
     onChangeToFlap() {
         this.isFlapMode = true;
         this.box.setTexture('rocket');
-        this.box.body.gravity.y = 4000;
+        this.box.body.gravity.y = 1500;
     }
 
     invertGravity() {
@@ -410,6 +413,7 @@ export class level4 extends Phaser.Scene {
 
     noFlap() {
         this.isFlapMode = false;
+        this.box.body.gravity.y = 4000;
         this.box.setTexture('box');
 
     }

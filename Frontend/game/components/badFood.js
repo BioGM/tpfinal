@@ -210,29 +210,132 @@ const pizzaList3=[
 ///////////////////////INFIERNO
 const burgerList4=[
     {
-        seconds: 5,
+        seconds: 2.3,
         quantity: 1,
-        y: 530,
+        y: 300,
      
     },
     {
-        seconds: 9,
+        seconds: 3.3,
         quantity: 1,
-        y: 530,
+        y: 540,
      
     },
     {
-        seconds: 11,
+        seconds: 8,
         quantity: 1,
-        y: 530,
+        y: 140,
+     
+    },
+    {
+        seconds: 10,
+        quantity: 1,
+        y: 140,
+     
+    },
+    {
+        seconds: 13.3,
+        quantity: 1,
+        y: 270,
      
     },
     {
         seconds: 16,
         quantity: 1,
-        y: 530,
+        y: 540,
+     
+    },
+    {
+        seconds: 18,
+        quantity: 1,
+        y: 250,
+     
+    },
+    {
+        seconds: 22,
+        quantity: 1,
+        y: 250,
+     
+    },
+    {
+        seconds: 23,
+        quantity: 1,
+        y: 140,
+     
+    },
+    {
+        seconds: 27,
+        quantity: 1,
+        y: 520,
+     
+    },
+    {
+        seconds: 30,
+        quantity: 1,
+        y: 320,
+     
+    },
+    {
+        seconds: 32,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 35.2,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 36.8,
+        quantity: 1,
+        y: 300,
+     
+    },
+    {
+        seconds: 41,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 43,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 45,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 48.2,
+        quantity: 1,
+        y: 540,
+     
+    },
+    {
+        seconds: 50,
+        quantity: 1,
+        y: 340,
+     
+    },
+    {
+        seconds: 52,
+        quantity: 1,
+        y: 340,
+     
+    },
+    {
+        seconds: 56,
+        quantity: 1,
+        y: 300,
      
     }
+    
 
 ]
 

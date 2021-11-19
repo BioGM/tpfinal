@@ -56,9 +56,10 @@ export class level2 extends Phaser.Scene {
 
 
         /*------comidas---------*/
-        this.load.image('manzana', './assets/images/food/manzana.png')//cambiar por palta
-        this.load.image('burger', './assets/images/food/burger.png')
-        this.load.image('pizza', './assets/images/food/pizza.png')
+        this.load.image('manzana', './assets/images/food/manzana.png')
+        this.load.image('naranja', './assets/images/food/naranja.png')
+        //this.load.image('burger', './assets/images/food/burger.png')
+        this.load.image('pancho', './assets/images/food/pancho.png')
 
 
 
@@ -169,7 +170,8 @@ export class level2 extends Phaser.Scene {
 
         this.goodFoods = this.physics.add.group();
 
-        this.crear_food(this.goodFoods, paltaList, 'manzana');
+        this.crear_food(this.goodFoods, manzanaList2, 'manzana');
+        this.crear_food(this.goodFoods, naranjaList2, 'naranja');
 
         this.goodFoods.setVelocityX(-700);
 
@@ -178,8 +180,8 @@ export class level2 extends Phaser.Scene {
 
         this.badFoods = this.physics.add.group();
 
-        this.crear_badfood(this.badFoods, burgerList, 'burger');
-        this.crear_badfood(this.badFoods, pizzaList, 'pizza');
+        this.crear_badfood(this.badFoods, panchoList2, 'pancho');
+    
 
         this.badFoods.setVelocityX(-700);
 
@@ -270,7 +272,7 @@ export class level2 extends Phaser.Scene {
             let positionX = 0;
             for (let i = 0; i < name.quantity; i++) {
 
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.25);
+                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.3);
                 positionX += nameAux.width;
 
             }
@@ -285,7 +287,7 @@ export class level2 extends Phaser.Scene {
             let positionX = 0;
             for (let i = 0; i < name.quantity; i++) {
 
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.2);
+                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.3);
                 positionX += nameAux.width;
 
             }

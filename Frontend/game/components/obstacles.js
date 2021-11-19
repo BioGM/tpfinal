@@ -594,6 +594,21 @@ const hellPlataformaList3 = [
         seconds: 3,
         quantity: 1,
         y:450
+    },
+    {
+        seconds: 21,
+        quantity: 1,
+        y:220
+    },
+    {
+        seconds: 28,
+        quantity: 1,
+        y:400
+    },
+    {
+        seconds: 34,
+        quantity: 1,
+        y:400
     }
 ]
 const spikeBottomList3 = [
@@ -613,6 +628,16 @@ const spikeBottomList3 = [
         y:550
     },
     {
+        seconds: 6,
+        quantity: 2,
+        y:550
+    },
+    {
+        seconds: 7,
+        quantity: 2,
+        y:550
+    },
+    {
         seconds: 17,
         quantity: 3,
         y:550
@@ -628,10 +653,31 @@ const spikeBottomList3 = [
         y:550
     },
     {
-        seconds: 6,
+        seconds: 24,
+        quantity: 3,
+        y:550
+    },
+    {
+        seconds: 26,
         quantity: 2,
         y:550
     },
+    {
+        seconds: 28,
+        quantity: 3,
+        y:550
+    },
+    {
+        seconds: 29,
+        quantity: 1,
+        y:550
+    },
+    {
+        seconds: 30,
+        quantity: 1,
+        y:550
+    },
+   
     {
         seconds: 31,
         quantity: 2,
@@ -643,8 +689,28 @@ const spikeBottomList3 = [
         y:550
     },
     {
+        seconds: 34,
+        quantity: 3,
+        y:550
+    },
+    {
         seconds: 36,
         quantity: 2,
+        y:550
+    },
+    {
+        seconds: 38,
+        quantity: 3,
+        y:550
+    },
+    {
+        seconds: 38,
+        quantity: 2,
+        y:550
+    },
+    {
+        seconds: 44,
+        quantity: 3,
         y:550
     },
     {
@@ -671,6 +737,16 @@ const spikeBottomList3 = [
         seconds: 53,
         quantity: 3,
         y:550
+    },
+    {
+        seconds: 55.5,
+        quantity: 2,
+        y:550
+    },
+    {
+        seconds: 56.6,
+        quantity: 1,
+        y:550
     }
 
 ]
@@ -692,8 +768,23 @@ const spikeTopList3 = [
         y:130
     },
     {
-        seconds: 17,
-        quantity: 8,
+        seconds: 15,
+        quantity: 1,
+        y:130
+    },
+    {
+        seconds: 20,
+        quantity: 1,
+        y:130
+    },
+    {
+        seconds: 21,
+        quantity: 2,
+        y:130
+    },
+    {
+        seconds: 22,
+        quantity: 1,
         y:130
     },
     {
@@ -741,15 +832,16 @@ const spikeSideList3 = [
         y:250
     },
     {
-        seconds: 23,
-        quantity: 2,
-        y:415
-    },
-    {
         seconds: 19,
         quantity: 3,
         y:300
     },
+    {
+        seconds: 23,
+        quantity: 2,
+        y:415
+    },
+    
     {
         seconds: 23,
         quantity: 2,
@@ -789,6 +881,11 @@ const spikeSideList3 = [
         seconds: 43,
         quantity: 2,
         y:415
+    },
+    {
+        seconds: 45,
+        quantity: 2,
+        y:300
     },
     {
         seconds: 49,

@@ -95,68 +95,102 @@ const naranjaList2 = [
     
 
 ]
+///////////////////////CEMENTERIO
 
-
-const ananaList2 = [
+const ananaList3 = [
+    
     {
-        seconds: 2,
+        seconds: 5,
         quantity: 1,
-        y: 540,
-
+        y: 540
     },
     {
-        seconds: 6,
+        seconds: 12.5,
         quantity: 1,
-        y: 540,
+        y: 140
     },
     {
-        seconds: 12,
+        seconds: 19.5,
         quantity: 1,
-        y: 540,
+        y: 270
     },
     {
-        seconds: 91,
+        seconds: 22.3,
         quantity: 1,
-        y: 540,
+        y: 270
     },
     {
-        seconds: 101,
+        seconds: 29.5,
         quantity: 1,
-        y: 540,
+        y: 420
+    },
+    {
+        seconds: 34.2,
+        quantity: 1,
+        y: 250
+    },
+    {
+        seconds: 41.2,
+        quantity: 1,
+        y: 250
+    },
+    {
+        seconds: 48.5,
+        quantity: 1,
+        y: 440
     }
 
 ]
 
-const peraList2 = [
+const peraList3 = [
+    
     {
-        seconds: 2,
+        seconds: 3.8,
         quantity: 1,
-        y: 540,
-
+        y: 350
     },
     {
-        seconds: 6,
+        seconds: 10.5,
         quantity: 1,
-        y: 540,
+        y: 270
     },
     {
-        seconds: 12,
+        seconds: 14.5,
         quantity: 1,
-        y: 540,
+        y: 140
     },
     {
-        seconds: 91,
+        seconds: 20.3,
         quantity: 1,
-        y: 540,
+        y: 270
     },
     {
-        seconds: 101,
+        seconds: 26.6,
         quantity: 1,
-        y: 540,
+        y: 350
+    },
+    {
+        seconds: 37,
+        quantity: 1,
+        y: 250
+    },
+    {
+        seconds: 43,
+        quantity: 1,
+        y: 250
+    },
+    {
+        seconds: 56,
+        quantity: 1,
+        y: 250
     }
+    
 
 ]
 
+
+
+///////////////////////INFIERNO
 
 const sandiaList2 = [
     {

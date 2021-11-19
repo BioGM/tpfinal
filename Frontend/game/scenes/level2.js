@@ -180,7 +180,7 @@ export class level2 extends Phaser.Scene {
 
         this.badFoods = this.physics.add.group();
 
-        this.crear_badfood(this.badFoods, panchoList2, 'pancho');
+        this.crear_badfood(this.badFoods,panchoList2, 'pancho');
     
 
         this.badFoods.setVelocityX(-700);

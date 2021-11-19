@@ -19,6 +19,7 @@ router.post('/suscripto',(req,res)=>{
         if (!error) {
             res.send(
                 '<h1>Gracias por suscribirte</h1>',
+                
              
             );
         } else {

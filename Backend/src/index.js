@@ -19,6 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.use(require('./routes/usuarios'))
+app.use(require('./routes/obstaculos'))
 
 app.listen(app.get('port'),()=>{
     console.log(`server en ${app.get('port')}`);

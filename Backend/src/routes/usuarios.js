@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-//const bodyParser =  require('body-parser');
 const mysqlConnection = require('../database.js');
-
-//var jsonParser = bodyParser.json();
-//var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 //registrar un usuario
 
@@ -20,12 +15,10 @@ router.post('/suscripto',(req,res)=>{
             res.send(
                 '<h1>Gracias por suscribirte</h1>',
                 
-             
             );
         } else {
             res.send(
                  'Ha ocurrido un error',
-                
             );
         }
        

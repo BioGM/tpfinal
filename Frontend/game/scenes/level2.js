@@ -72,6 +72,16 @@ export class level2 extends Phaser.Scene {
     create() {
         this.cameras.main.fadeIn(500);
         this.game.sound.stopAll();
+        getLevel(1).then((response) => {
+            console.log("esto es response")
+            console.log(response);
+            let keyBricks = [];
+            response.obstacles.forEach(element => {
+                keyBricks.push(element.tipo);
+            });
+            console.log("esto es keybricks")
+            console.log(keyBricks);
+        });
         this.castleTile = this.add.tileSprite(0, 0, 1000, 600, "castleTile");
         this.castleTile.setOrigin(0, 0);
         this.castleTile.setScrollFactor(0);
@@ -156,7 +166,7 @@ export class level2 extends Phaser.Scene {
 
 
 
-        this.Time = this.add.text(790, 560, 'Time: ' + this.timmer, { fontSize: '30px', fill: '#c8fd56',stroke:'#000000' ,strokeThickness:3, fontFamily: 'Permanent Marker' });
+        this.Time = this.add.text(790, 560, 'Time: ' + this.timmer, { fontSize: '30px', fill: '#c8fd56', stroke: '#000000', strokeThickness: 3, fontFamily: 'Permanent Marker' });
 
 
         // this.spikes = this.physics.add.group();
@@ -180,8 +190,8 @@ export class level2 extends Phaser.Scene {
 
         this.badFoods = this.physics.add.group();
 
-        this.crear_badfood(this.badFoods,panchoList2, 'pancho');
-    
+        this.crear_badfood(this.badFoods, panchoList2, 'pancho');
+
 
         this.badFoods.setVelocityX(-700);
 
@@ -215,25 +225,25 @@ export class level2 extends Phaser.Scene {
             this.jumpCount = 0;
         }
 
-      
+
         if (this.box.body.positionX <= 10) {
-            
+
             this.gameOver();
         }
-        
+
 
         if (this.timmer > 0) {
             this.timmer -= 0.02;
         }
         this.Time.setText('Time: ' + this.timmer.toFixed(0));
-        if (this.timmer<=40 && this.timmer>20) {
-            this.Time.setColor(  '#f57c16')
-        }else if (this.timmer<=20) {
-            this.Time.setColor(  '#e62020')
-        }else(
-            this.Time.setColor(  '#c8fd56')
+        if (this.timmer <= 40 && this.timmer > 20) {
+            this.Time.setColor('#f57c16')
+        } else if (this.timmer <= 20) {
+            this.Time.setColor('#e62020')
+        } else (
+            this.Time.setColor('#c8fd56')
         )
-        
+
 
         if (this.timmer <= 0.2 || this.valueEnergy === 0) {
             this.gameOver();
@@ -245,7 +255,7 @@ export class level2 extends Phaser.Scene {
             this.temCount = 0;//no sirve
         }
 
-        
+
 
     }
 
@@ -355,7 +365,7 @@ export class level2 extends Phaser.Scene {
 
     }
 
-    win(){
+    win() {
         this.time.addEvent({
             delay: 700,
             callback: () => {

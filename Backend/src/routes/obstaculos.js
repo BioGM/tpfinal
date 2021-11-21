@@ -25,7 +25,7 @@ router.get("/levels/:id", (req, res) => {
             } else {
               res.status(400).json({
                 ok: false,
-                mensaje: "Hubo un problema para generar la respuesta",
+                mensaje: "Ha ocurrido un problema para generar la respuesta",
               });
             }
           }
@@ -33,7 +33,7 @@ router.get("/levels/:id", (req, res) => {
       } else {
         res.status(400).json({
           ok: false,
-          mensaje: "Hubo un problema para generar la respuesta",
+          mensaje: "Ha ocurrido un problema para generar la respuesta",
         });
       }
     }

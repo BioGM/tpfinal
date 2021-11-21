@@ -10,7 +10,7 @@ router.post('/suscripto',(req,res)=>{
     console.log(email)
     
     
-    mysqlConnection.query(`INSERT INTO usuarios (mail) VALUE (?)`, [email],  (error,  fields)=> {
+    mysqlConnection.query(`INSERT INTO players (email) VALUE (?)`, [email],  (error,  fields)=> {
         if (!error) {
             res.send(
                 '<h1>Gracias por suscribirte</h1>',

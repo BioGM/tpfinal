@@ -68,11 +68,11 @@ export class level3 extends Phaser.Scene {
         this.load.image('portal2', './assets/images/levels/portal.png');
 
         this.load.image('hellPlataforma', './assets/images/levels/hellPlataforma.png');
-        
+
         this.load.image('xob', './assets/images/levels/xob.png');
         this.load.image('rocket', './assets/images/levels/rocket.png');
         this.load.image('box', './assets/images/levels/box.png');
-       
+
 
 
         this.load.image('level3', './assets/images/level3/level3.png')
@@ -95,6 +95,46 @@ export class level3 extends Phaser.Scene {
     create() {
         this.cameras.main.fadeIn(500);
         this.game.sound.stopAll();
+
+
+
+        getLevel(3).then((response) => {
+
+            let obstacles = [];
+            response.obstacles.forEach(element => {
+                obstacles.push(element);
+            });
+
+            this.hellPlataforma = this.physics.add.group();
+            this.spikes = this.physics.add.group();
+
+            this.crear_obstaculos(this.hellPlataforma, this.spikes, obstacles)
+            this.spikes.setVelocityX(-700);
+            this.hellPlataforma.setVelocityX(-700);
+            //this.physics.add.collider(this.box, this.spikes, this.gameOver, null, this)
+            this.physics.add.collider(this.box, this.hellPlataforma)
+
+
+        });
+
+        getFood(3).then((response) => {
+            let foods = [];
+            response.foods.forEach(element => {
+                foods.push(element);
+            });
+
+            this.badFoods = this.physics.add.group();
+            this.goodFoods = this.physics.add.group();
+
+            this.crear_food(this.goodFoods, this.badFoods, foods);
+            this.badFoods.setVelocityX(-700);
+            this.goodFoods.setVelocityX(-700);
+            this.physics.add.overlap(this.box, this.goodFoods, this.plustemp, null, this)
+            this.physics.add.overlap(this.box, this.badFoods, this.resttemp, null, this)
+
+        });
+
+
         this.hellTile = this.add.tileSprite(0, 0, 1000, 600, "hellTile");
         this.hellTile.setOrigin(0, 0);
         this.hellTile.setScrollFactor(0);
@@ -122,53 +162,53 @@ export class level3 extends Phaser.Scene {
         this.box.body.gravity.y = 4000;
         this.physics.add.collider(this.box, this.groundBottom);
         this.physics.add.collider(this.box, this.groundTop);
-
-        //plataformas 
-        this.hellPlataforma = this.physics.add.group();
-
-
-        for (let plataf of hellPlataformaList3) {
-            let positionX = 0;
-            for (let i = 0; i < plataf.quantity; i++) {
-                let platAux = this.hellPlataforma.create((plataf.seconds * 700) + positionX, plataf.y, 'hellPlataforma').setOrigin(0, 1);
-                positionX += platAux.width;
-                platAux.setImmovable(true);
-            }
-
-        }
-        this.physics.add.collider(this.box, this.hellPlataforma);
-        //obstacles
-        this.spikes = this.physics.add.group();
-        for (let spike of spikeBottomList3) {
-            let positionX = 0;
-            for (let i = 0; i < spike.quantity; i++) {
-                let spikeAux = this.spikes.create((spike.seconds * 700) + positionX, spike.y, 'spikeBottom').setOrigin(0, 1);
-                positionX += spikeAux.width;
-            }
-        }
-        for (let spike of spikeTopList3) {
-            let positionX = 0;
-            for (let i = 0; i < spike.quantity; i++) {
-                let spikeAux = this.spikes.create((spike.seconds * 700) + positionX, spike.y, 'spikeTop').setOrigin(0, 1);
-                positionX += spikeAux.width;
-            }
-        }
-
-        for (let spike of spikeSideList3) {
-            let positionY = 0;
-            for (let i = 0; i < spike.quantity; i++) {
-                let spikeAux = this.spikes.create((spike.seconds * 700), spike.y + positionY, 'spikeSide').setOrigin(0, 1);
-                positionY += spikeAux.width;
-            }
-        }
-
-        this.spikes.setVelocityX(-700);
-        this.hellPlataforma.setVelocityX(-700);
-
-        //esta comentado para probar los niveles
-        //this.physics.add.collider(this.box, this.spikes, this.gameOver, null, this)
-        this.physics.add.collider(this.box, this.hellPlataforma, null, this)
-
+        /*---------------------PARA EDITAR OBSDTACULOS DEL NIVEL SIN DB
+                //plataformas 
+                // this.hellPlataforma = this.physics.add.group();
+        
+        
+                // for (let plataf of hellPlataformaList3) {
+                //     let positionX = 0;
+                //     for (let i = 0; i < plataf.quantity; i++) {
+                //         let platAux = this.hellPlataforma.create((plataf.seconds * 700) + positionX, plataf.y, 'hellPlataforma').setOrigin(0, 1);
+                //         positionX += platAux.width;
+                //         platAux.setImmovable(true);
+                //     }
+        
+                // }
+                // this.physics.add.collider(this.box, this.hellPlataforma);
+                // //obstacles
+                // this.spikes = this.physics.add.group();
+                // for (let spike of spikeBottomList3) {
+                //     let positionX = 0;
+                //     for (let i = 0; i < spike.quantity; i++) {
+                //         let spikeAux = this.spikes.create((spike.seconds * 700) + positionX, spike.y, 'spikeBottom').setOrigin(0, 1);
+                //         positionX += spikeAux.width;
+                //     }
+                // }
+                // for (let spike of spikeTopList3) {
+                //     let positionX = 0;
+                //     for (let i = 0; i < spike.quantity; i++) {
+                //         let spikeAux = this.spikes.create((spike.seconds * 700) + positionX, spike.y, 'spikeTop').setOrigin(0, 1);
+                //         positionX += spikeAux.width;
+                //     }
+                // }
+        
+                // for (let spike of spikeSideList3) {
+                //     let positionY = 0;
+                //     for (let i = 0; i < spike.quantity; i++) {
+                //         let spikeAux = this.spikes.create((spike.seconds * 700), spike.y + positionY, 'spikeSide').setOrigin(0, 1);
+                //         positionY += spikeAux.width;
+                //     }
+                // }
+        
+                // this.spikes.setVelocityX(-700);
+                // this.hellPlataforma.setVelocityX(-700);
+        
+                // //esta comentado para probar los niveles
+                // //this.physics.add.collider(this.box, this.spikes, this.gameOver, null, this)
+                // this.physics.add.collider(this.box, this.hellPlataforma, null, this)
+        /*-------------------------------------------*/
         //portalGravity
         this.portalGravity = this.physics.add.sprite(7 * 700, 465, 'portalGravity').setOrigin(0, 1);
         this.portalGravity.body.velocity.x = -700;
@@ -202,28 +242,26 @@ export class level3 extends Phaser.Scene {
         this.Time = this.add.text(790, 560, 'Time: ' + this.timmer, { fontSize: '30px', fill: '#c8fd56', stroke: '#000000', strokeThickness: 3, fontFamily: 'Permanent Marker' });
 
 
-        // this.spikes = this.physics.add.group();
 
-        // this.crear_objetos(this.spikes, spikeUno, 'spikeUno');
+        /*--------------PARA EDITAR comidas DEL NIVEL SIN DB----------------*/
+        // this.goodFoods = this.physics.add.group();
 
-        this.goodFoods = this.physics.add.group();
+        // this.crear_food(this.goodFoods, ananaList3, 'anana');
+        // this.crear_food(this.goodFoods, peraList3, 'pera');
 
-        this.crear_food(this.goodFoods, ananaList3, 'anana');
-        this.crear_food(this.goodFoods, peraList3, 'pera');
-
-        this.goodFoods.setVelocityX(-700);
+        // this.goodFoods.setVelocityX(-700);
 
 
-        this.physics.add.overlap(this.box, this.goodFoods, this.plustemp, null, this)
+        // this.physics.add.overlap(this.box, this.goodFoods, this.plustemp, null, this)
 
-        this.badFoods = this.physics.add.group();
+        // this.badFoods = this.physics.add.group();
 
-        this.crear_badfood(this.badFoods, pizzaList3, 'pizza');
+        // this.crear_badfood(this.badFoods, pizzaList3, 'pizza');
 
-        this.badFoods.setVelocityX(-700);
+        // this.badFoods.setVelocityX(-700);
 
-        this.physics.add.overlap(this.box, this.badFoods, this.resttemp, null, this)
-
+        // this.physics.add.overlap(this.box, this.badFoods, this.resttemp, null, this)
+        /*------------------------------*/
 
 
         this.level3 = this.add.sprite(490, 570, 'level3')
@@ -287,35 +325,51 @@ export class level3 extends Phaser.Scene {
             this.temCount = 0;//no sirve
         }
 
-        
+
 
     }
 
-    crear_objetos(names, list, src) {
-        if (src = 'spikeUno') {
-            for (let name of list) {
-                let positionX = 0;
-                for (let i = 0; i < name.quantity; i++) {
+    crear_obstaculos(platformGrup, spikeGrup, lista) {
 
-                    let nameAux = names.create((name.seconds * 700) + positionX, name.y, src).setOrigin(0, 1).setImmovable(true).setScale(0.2, 0.1);
-                    positionX += nameAux.width * 0.2;
+        for (let name of lista) {
+            let positionX = 0;
+            let positionY = 0;
+
+            for (let i = 0; i < name.cantidad; i++) {
+                if (name.tipo === "hellPlataforma") {
+                    platformGrup.create((name.segundos * 700), name.posY, name.name).setOrigin(0, 1).setImmovable(true);
+
+                } else if (name.tipo === "spike") {
+                    if (name.name === "spikeBottom" || name.name === "spikeTop") {
+                        let spikeAuxX = spikeGrup.create((name.segundos * 700) + positionX, name.posY, name.name).setOrigin(0, 1);
+                        positionX += spikeAuxX.width;
+                    } else if (name.name === "spikeSide") {
+                        let spikeAuxY = spikeGrup.create((name.segundos * 700), name.posY + positionY, name.name).setOrigin(0, 1);
+                        positionY += spikeAuxY.width;
+                    }
 
                 }
             }
+
         }
+
+
 
     }
 
+    crear_food(goodGrup, badGrup, lista) {
 
-
-    crear_food(foods, lista, srce) {
 
         for (let name of lista) {
-            let positionX = 0;
-            for (let i = 0; i < name.quantity; i++) {
 
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.3);
-                positionX += nameAux.width;
+            for (let i = 0; i < name.cantidad; i++) {
+                if (name.tipo === "good") {
+                    goodGrup.create((name.segundos * 700), name.posY, name.name).setOrigin(0, 1).setImmovable(true).setScale(0.3);
+
+                } else if (name.tipo === "bad") {
+                    badGrup.create((name.segundos * 700), name.posY, name.name).setOrigin(0, 1).setImmovable(true).setScale(0.27);
+
+                }
 
             }
         }
@@ -323,20 +377,7 @@ export class level3 extends Phaser.Scene {
 
     }
 
-    crear_badfood(foods, lista, srce) {
 
-        for (let name of lista) {
-            let positionX = 0;
-            for (let i = 0; i < name.quantity; i++) {
-
-                let nameAux = foods.create((name.seconds * 700) + positionX, name.y, srce).setOrigin(0, 1).setImmovable(true).setScale(0.27);
-                positionX += nameAux.width;
-
-            }
-        }
-
-
-    }
 
     plustemp(box, goodFood) {
 
@@ -421,7 +462,7 @@ export class level3 extends Phaser.Scene {
 
     }
 
-    win(){
+    win() {
         this.time.addEvent({
             delay: 700,
             callback: () => {

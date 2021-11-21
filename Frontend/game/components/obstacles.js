@@ -290,7 +290,7 @@ const spikeSideList = [
 
 //////////////////////////////CASTILLO 2
 
-const castlePlataformaList2 = [
+const castlePlataformaList2 = [//'castlePlataforma'
     {
         seconds: 11.5,
         quantity: 1,
@@ -364,7 +364,7 @@ const castlePlataformaList2 = [
     }
 
 ]
-const spikeBottomCastleList2 = [
+const spikeBottomCastleList2 = [//'spikeBottomCastle'
     {
         seconds: 2,
         quantity: 2,
@@ -514,7 +514,7 @@ const spikeTopList2 = [
 
 ]
 
-const spikeSideList2 = [
+const spikeSideList2 = [//'spikeSide'
     {
         seconds: 4,
         quantity: 2,
@@ -584,7 +584,7 @@ const spikeSideList2 = [
 //////////////////////////////CEMENTERIO 3
 
 
-const hellPlataformaList3 = [
+const hellPlataformaList3 = [//hellPlataforma
     {
         seconds: 2,
         quantity: 1,
@@ -611,7 +611,7 @@ const hellPlataformaList3 = [
         y:400
     }
 ]
-const spikeBottomList3 = [
+const spikeBottomList3 = [//spikeBottom
     {
         seconds: 2,
         quantity: 4,
@@ -751,7 +751,7 @@ const spikeBottomList3 = [
 
 ]
 
-const spikeTopList3 = [
+const spikeTopList3 = [//spikeTop
     {
         seconds: 9,
         quantity: 2,
@@ -810,7 +810,7 @@ const spikeTopList3 = [
 
 ]
 
-const spikeSideList3 = [
+const spikeSideList3 = [//spikeSide
     {
         seconds: 3,
         quantity: 2,
@@ -915,7 +915,7 @@ const spikeSideList3 = [
 
 
 
-const hellPlataformaList4 = [
+const hellPlataformaList4 = [//hellPlataforma
     {
         seconds: 2,
         quantity: 1,
@@ -952,7 +952,7 @@ const hellPlataformaList4 = [
         y:400
     }
 ]
-const spikeBottomList4 = [
+const spikeBottomList4 = [//spikeBottom
     {
         seconds: 2,
         quantity: 4,
@@ -1087,7 +1087,7 @@ const spikeBottomList4 = [
 
 ]
 
-const spikeTopList4 = [
+const spikeTopList4 = [//spikeTop
     {
         seconds: 9,
         quantity: 2,
@@ -1121,7 +1121,7 @@ const spikeTopList4 = [
 
 ]
 
-const spikeSideList4 = [
+const spikeSideList4 = [//spikeSide
     {
         seconds: 3,
         quantity: 2,
